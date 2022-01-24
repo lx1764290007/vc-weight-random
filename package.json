@@ -1,0 +1,18 @@
+{
+  "name": "weighted-random",
+  "version": "1.0.0",
+  "description": "Weighted random",
+  "main": "index.js",
+  "scripts": {
+    "test": "node example/index.js"
+  },
+  "keywords": [
+    "weighted",
+    "random",
+    "权重随机",
+    "随机抽奖"
+  ],
+  "author": "Vencent Lum",
+  "license": "ISC",
+  "git": "git@gitee.com:Vencentlum/weighted-random.git"
+}
