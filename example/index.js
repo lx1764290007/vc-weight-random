@@ -2,7 +2,7 @@ const VC_fn = require('../index');
 
 // Map 结构里的 value 即权重值，只能是正整数, key 可以是任意合法类型
 // default option, return key
-const example = new Map([[{year: new Date()},3], ['A',6], ['B',1], ['C',3], [Symbol('lanlan'), 4]]);
+const example = new Map([[{time: new Date()},3], ['A',6], ['B',1], ['C',3], [Symbol('lanlan'), 4]]);
 console.log(VC_fn(example));
 
 // option, return key[]
