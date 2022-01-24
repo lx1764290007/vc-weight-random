@@ -1,6 +1,6 @@
 {
   "name": "weighted-random",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Weighted random",
   "main": "index.js",
   "scripts": {
