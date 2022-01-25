@@ -1,5 +1,5 @@
 {
-  "name": "weighted-random",
+  "name": "vc-weighted-random",
   "version": "1.0.1",
   "description": "Weighted random",
   "main": "index.js",
@@ -9,7 +9,9 @@
   "keywords": [
     "weighted",
     "random",
+    "weighted-random",
     "权重随机",
+    "随机",
     "随机抽奖"
   ],
   "author": "Vencent Lum",

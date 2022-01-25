@@ -1,3 +1,6 @@
+
+### 中文  &#124;  [English](./README-en.md)
+
 # 加权随机取值
 
 #### 介绍
@@ -6,18 +9,20 @@
 
 #### 安装教程
 
-##### 使用 npm
+##### 使用 ```npm``` 和 ```yarn```
 ```shell script
-npm install vc-weight-random
-```
-个人推荐使用 [pnpm](https://pnpm.io/) 代替 npm 作为包管理器
-##### 使用 pnpm
-```shell script
-pnpm install vc-weight-random
-```
+npm i vc-weighted-random
 
+yarn add vc-weighted-random
+```
+个人推荐使用 [pnpm](https://pnpm.io/) 代替 ```npm``` 作为包管理器
+##### 使用 ```pnpm```
+```shell script
+pnpm install vc-weighted-random
+```
+ 
 ##### 在浏览器环境中直接使用
-先克隆项目至本地
+先克隆项目至本地（或者下载```releases```包）
 ```shell script
 git clone https://gitee.com/Vencentlum/weighted-random.git
 ```
@@ -29,7 +34,7 @@ window.VC_weight_random
 
 #### 使用说明
 ```shell script
-const VC_fn = require('vc-weight-random')
+const VC_fn = require('vc-weighted-random')
 
 VC_fn(params, option);
 ```
@@ -38,10 +43,16 @@ VC_fn(params, option);
 | VC_fn  | 可能返回的值 null &#124; key &#124; key[] | 详情请查看example的测试用例 |
 | params  | Map数据结构,key可以是任意类型，value是权重值 |  Map的value只接受正整数 |
 | option  | Object | 见下方    |
+
 ```shell script
 // default
 const option = {
     continuous: false, // boolean,是否连续取值，直到取完,为true时返回数组，为false时返回Map的key
     showErrorMsg: true // boolean,参数检查出现错误时是否打印错误信息
 }
+```
+#### 测试
+克隆本项目至你的本地，在此项目根目录下(需要```node.js```环境)
+```shell
+node example/index.js
 ```
