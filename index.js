@@ -74,7 +74,7 @@ const random_source = (Min, Max) => {
  * @param str
  * @returns {boolean}
  */
-const is_positive_integer = (str) => /^[0-9]*[1-9][0-9]*$/g.test(str);
+const is_positive_integer = (str) => (/^[0-9]*[1-9][0-9]*$/g).test(str);
 
 /**
  * 简单参数类型检查
@@ -84,11 +84,11 @@ const check_params = (params) => {
     if(params instanceof Map) {
         const p = new Map(params);
         if(!Array.from(p.values()).every(it => typeof it === 'number' && is_positive_integer(String(it)))) {
-           throw new Error('VC-weight-random: 权重参数只接受正整数，若是浮点数请自行处理成正整数', 'weighted-randow/index', 88);
+            throw new Error('VC-weight-random: 权重参数只接受正整数，若是浮点数请自行处理成正整数', 'weighted-random/index', 88);
         }
         return true
     }
-     throw new Error('VC-weight-random: 参数类型错误，期望的是Map类型', 'weighted-randow/index', 92)
+    throw new Error('VC-weight-random: 参数类型错误，期望的是Map类型', 'weighted-random/index', 92)
 }
 
 const VC_main_fn = (param) => {
@@ -117,10 +117,10 @@ const VC_main = (param, option = defaultOptions) => {
             if (option.continuous) {
                 result = [VC_main_fn(p)];
                 let index = 0;
-                for (let i = p.size + 1; i>=0; i--) {
+                for (let i = p.size + 1; i >= 0; i--) {
                     p.delete(result[index]);
                     result.push(VC_main_fn(p));
-                    ++ index;
+                    ++index;
                     --i;
                 }
             } else {
