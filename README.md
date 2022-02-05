@@ -40,7 +40,7 @@ VC_fn(params, option);
 ```
 |  参数   | 说明  | 补充说明 |
 |  ----  | ----  | --- |
-| VC_fn  | 可能返回的值 null &#124; key &#124; key[] | 详情请查看example的测试用例 |
+| VC_fn  | 可能返回的值 null &#124; key &#124; key[] | 参数不合法时默认返回null。详情请查看example的测试用例 |
 | params  | Map数据结构,key可以是任意类型，value是权重值 |  Map的value只接受正整数 |
 | option  | Object | 见下方    |
 
