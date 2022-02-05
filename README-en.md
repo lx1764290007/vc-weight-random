@@ -34,7 +34,7 @@ VC_fn(params, option);
 ```
 |  field   | Introduction  | explain |
 |  ----  | ----  | --- |
-| VC_fn  | return value probably null &#124; key &#124; key[] | see ```example/index.js``` |
+| VC_fn  | return value probably null &#124; key &#124; key[] | if ```params```not good,get ```null```.see ```example/index.js``` |
 | params  | Map data-structure,key can be any，value is weight | value is a positive integer in Map data-structure |
 | option  | Object | -    |
 
