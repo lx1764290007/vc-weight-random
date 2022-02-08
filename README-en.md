@@ -19,7 +19,7 @@ pnpm install vc-weighted-random
 ```
 ##### Browser environment
 ```shell script
-git clone https://gitee.com/Vencentlum/weighted-random.git
+git clone https://github.com/lx1764290007/vc-weight-random.git
 ```
 copy ```index.js``` to your project, use as ```script``` tags
 ```shell script
