@@ -31,15 +31,13 @@ const shuffle = ([...arr]) => {
  */
 const to_gcm = (target) => {
     let array_gcm = [...target.values()];
-    let array = [...target.values()];
-    let dataSourceClone = new Map(target);
-    let m = new Map();
     while (array_gcm.length > 1) {
         array_gcm.push(VC_gcm(array_gcm.pop(), array_gcm.pop()));
     }
-    let array_gcm_after = array.map(it => it / array_gcm[0]);
-    [...dataSourceClone.keys()].forEach((it, i) => m.set(it, array_gcm_after[i]))
-    return m;
+    target.forEach((value, key) => {
+        target.set(key, value / array_gcm[0])
+    });
+    return target;
 }
 
 /**
@@ -50,12 +48,12 @@ const to_gcm = (target) => {
 const to_array = (target) => {
     let data = [];
     Array.from(target).forEach((it) => {
-        for(let index = 0; index < it[1]; index++) {
+        for (let index = 0; index < it[1]; index++) {
             data.push(it[0])
         }
     })
     return data;
-}
+};
 
 /**
  * 取随机数
@@ -84,18 +82,16 @@ const check_params = (params) => {
     if(params instanceof Map) {
         const p = new Map(params);
         if(!Array.from(p.values()).every(it => typeof it === 'number' && is_positive_integer(String(it)))) {
-            throw new Error('VC-weight-random: 权重参数只接受正整数，若是浮点数请自行处理成正整数', 'weighted-random/index', 88);
+            throw new Error('VC-weight-random: 权重参数只接受正整数，若是浮点数请自行处理成正整数');
         }
         return true
     }
-    throw new Error('VC-weight-random: 参数类型错误，期望的是Map类型', 'weighted-random/index', 92)
+    throw new Error('VC-weight-random: 参数类型错误，期望的是Map类型');
 }
 
 const VC_main_fn = (param) => {
-    let result = null;
     const container = shuffle(to_array(to_gcm(param)));
-    result = container[random_source(0, container.length)];
-    return result;
+    return  container[random_source(0, container.length)];
 }
 
 const defaultOptions = Object.freeze({
