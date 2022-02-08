@@ -24,7 +24,7 @@ pnpm install vc-weighted-random
 ##### 在浏览器环境中直接使用
 先克隆项目至本地（或者下载```releases```包）
 ```shell script
-git clone https://gitee.com/Vencentlum/weighted-random.git
+git clone https://github.com/lx1764290007/vc-weight-random.git
 ```
 随后将本地目录下的index.js拷贝至你的项目中，最后通过script标签引入即可。
 ```shell script
